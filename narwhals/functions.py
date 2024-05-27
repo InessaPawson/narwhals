@@ -32,3 +32,21 @@ def concat(
         plx.concat([df._dataframe for df in items], how=how),
         is_polars=first_item._is_polars,
     )
+    """
+    Combine multiple DataFrames, LazyFrames, or Series into a single object.
+
+    Parameters:
+    items
+        DataFrames, LazyFrames, or Series to concatenate.
+    how : {'vertical','horizontal'}
+    
+        * vertical: Stacks Series from DataFrames vertically and fills with `null`
+          if the lengths don't match.
+        * horizontal: Stacks Series from DataFrames horizontally and fills with `null`
+          if the lengths don't match.
+        
+    Notes:
+    Only horizontal and vertical concatenations are supported.
+    
+    Examples: TO DO
+"""
